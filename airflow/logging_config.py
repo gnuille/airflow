@@ -66,6 +66,7 @@ def configure_logging():
                 task_handler_config["filters"].append("mask_secrets")
 
         # Try to init logging
+        print(logging_config)
         dictConfig(logging_config)
     except (ValueError, KeyError) as e:
         log.error("Unable to load the config, contains a configuration error.")
